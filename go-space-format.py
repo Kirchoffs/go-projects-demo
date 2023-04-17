@@ -11,7 +11,7 @@ def replace_tabs_with_spaces(file_path):
     with open(file_path, 'w') as f:
         f.write(contents)
 
-def replace_tabs_in_folder(folder_path):
+def replace_tabs_with_spaces_in_folder(folder_path):
     for dirpath, dirnames, filenames in os.walk(folder_path):
         for filename in filenames:
             if filename.endswith('.go'):
@@ -19,4 +19,4 @@ def replace_tabs_in_folder(folder_path):
                 print(file_path)
                 replace_tabs_with_spaces(file_path)
 
-replace_tabs_in_folder(os.getcwdb().decode('utf-8'))
+replace_tabs_with_spaces_in_folder(os.getcwdb().decode('utf-8'))
